@@ -20,13 +20,14 @@ public:
     }
     int left=height(root->left);
     int right=height(root->right);
+    maxi=max(maxi,left+right);
     return 1+max(left,right);
    }
     int diameterOfBinaryTree(TreeNode* root) {
-       if(root==NULL) return 0;
-       int lh=height(root->left);
-       int rh=height(root->right);
-       maxi=max(max(lh+rh,diameterOfBinaryTree(root->left)),max(lh+rh,diameterOfBinaryTree(root->right)));
-       return maxi;
+    //    if(root==NULL) return 0;
+       height(root);
+    //    maxi=max(max(lh+rh,diameterOfBinaryTree(root->left)),max(lh+rh,diameterOfBinaryTree(root->right)));
+    //    return maxi;
+      return maxi;
     }
 };
