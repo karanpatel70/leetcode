@@ -25,7 +25,6 @@ public:
         for (int j = 1; j < n; j++) {
             ans = min(ans, matrix[n - 1][j]);
         }
-
         return ans;
     }
 };
